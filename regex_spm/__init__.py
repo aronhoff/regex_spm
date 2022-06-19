@@ -1,6 +1,6 @@
 import re
 
-from regex_spm_match import RegexSpmMatch
+from .regex_spm_match import RegexSpmMatch
 
 
 def search_in(string: str) -> RegexSpmMatch:
