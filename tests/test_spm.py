@@ -1,10 +1,11 @@
+import re
 from abc import ABC
 
 import regex_spm
 
 
 class MyRegexes(ABC):
-  letters = r'[a-zA-Z]+'
+  letters = re.compile(r'[a-zA-Z]+')
   numbers = r'[0-9]+'
 
 

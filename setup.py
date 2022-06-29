@@ -6,7 +6,7 @@ with open('README.md', 'r') as f:
 setup(
   name='regex_spm',
   version='1.0.0',
-  packages=['regex_spm'],
+  packages=['regex_spm', 'regex_spm.regex_spm_match'],
   url='https://github.com/aronhoff/regex_spm',
   license='MIT',
   author='aronhoffmann',
