@@ -5,7 +5,7 @@ with open('README.md', 'r') as f:
 
 setup(
     name='regex_spm',
-    version='1.0.0',
+    version='1.0.1',
     packages=['regex_spm'],
     package_data={'regex_spm': ['py.typed']},
     url='https://github.com/aronhoff/regex_spm',
