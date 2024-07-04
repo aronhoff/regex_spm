@@ -10,7 +10,7 @@ class MyRegexes(ABC):
 
 
 class TestSpmSearch:
-    def test_spm_search_scenario_1(self):
+    def test_spm_search_scenario_1(self) -> None:
         match regex_spm.search_in('abcdef'):
             case MyRegexes.numbers:
                 assert False
@@ -19,14 +19,14 @@ class TestSpmSearch:
             case _:
                 assert False
     
-    def test_spm_search_scenario_2(self):
+    def test_spm_search_scenario_2(self) -> None:
         match regex_spm.search_in('abcd12345ef'):
             case MyRegexes.numbers as m:
                 assert m[0] == '12345'
             case _:
                 assert False
     
-    def test_spm_search_scenario_3(self):
+    def test_spm_search_scenario_3(self) -> None:
         match regex_spm.search_in('abcdededef'):
             case r'(de)+' as m:
                 assert m[0] == 'dedede'
@@ -36,7 +36,7 @@ class TestSpmSearch:
 
 
 class TestSpmMatch:
-    def test_spm_match_scenario_1(self):
+    def test_spm_match_scenario_1(self) -> None:
         match regex_spm.match_in('abcdef'):
             case MyRegexes.numbers:
                 assert False
@@ -45,7 +45,7 @@ class TestSpmMatch:
             case _:
                 assert False
     
-    def test_spm_match_scenario_2(self):
+    def test_spm_match_scenario_2(self) -> None:
         match regex_spm.match_in('abcd12345'):
             case MyRegexes.numbers:
                 assert False
@@ -54,7 +54,7 @@ class TestSpmMatch:
             case _:
                 assert False
     
-    def test_spm_match_scenario_3(self):
+    def test_spm_match_scenario_3(self) -> None:
         match regex_spm.match_in('abcdededef'):
             case r'abc(de)+' as m:
                 assert m[0] == 'abcdedede'
@@ -64,7 +64,7 @@ class TestSpmMatch:
 
 
 class TestSpmFullMatch:
-    def test_spm_fullmatch_scenario_1(self):
+    def test_spm_fullmatch_scenario_1(self) -> None:
         match regex_spm.fullmatch_in('abcdef'):
             case MyRegexes.numbers:
                 assert False
@@ -73,7 +73,7 @@ class TestSpmFullMatch:
             case _:
                 assert False
     
-    def test_spm_fullmatch_scenario_2(self):
+    def test_spm_fullmatch_scenario_2(self) -> None:
         match regex_spm.fullmatch_in('abcd12345'):
             case MyRegexes.numbers:
                 assert False
@@ -84,7 +84,7 @@ class TestSpmFullMatch:
             case _:
                 assert False
     
-    def test_spm_fullmatch_scenario_3(self):
+    def test_spm_fullmatch_scenario_3(self) -> None:
         match regex_spm.fullmatch_in('abcdededef'):
             case r'abc(de)+f' as m:
                 assert m[0] == 'abcdededef'
