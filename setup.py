@@ -7,6 +7,7 @@ setup(
     name='regex_spm',
     version='1.0.0',
     packages=['regex_spm'],
+    package_data={'regex_spm': ['py.typed']},
     url='https://github.com/aronhoff/regex_spm',
     license='MIT',
     author='aronhoffmann',
