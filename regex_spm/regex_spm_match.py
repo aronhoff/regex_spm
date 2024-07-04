@@ -9,7 +9,7 @@ class RegexSpmMatch:
     _match_func: Callable[[re.Pattern, str], re.Match]
     match: re.Match | None = None
     
-    def __eq__(self, pattern: str | re.Pattern | tuple[str, int | re.RegexFlag]):
+    def __eq__(self, pattern: str | re.Pattern | tuple[str, int | re.RegexFlag]) -> bool:
         if isinstance(pattern, str):
             pattern = re.compile(pattern)
         elif isinstance(pattern, tuple):
